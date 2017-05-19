@@ -34,7 +34,7 @@ import net.minecraftforge.fml.common.network.FMLNetworkEvent.ClientDisconnection
 
 @Mod(version=ModMain.VERSION,modid=ModMain.MODID,name=ModMain.NAME)
 public class ModMain {
-	public static final String VERSION="1.0",MODID="autologin",NAME="Auto Login Mod",LittleName="AutoLog";
+	public static final String VERSION="1.1",MODID="autologin",NAME="Auto Login Mod",LittleName="AutoLog";
     private IReloadableResourceManager mcResourceManager;
     private final MetadataSerializer metadataSerializer_ = new MetadataSerializer();
 	public static HashMap<String, String> passwordList;
