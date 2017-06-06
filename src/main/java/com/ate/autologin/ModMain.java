@@ -65,7 +65,7 @@ public class ModMain {
 		if(!Minecraft.getMinecraft().isSingleplayer() && !isinConnect){
 			if(event.getMessage().getUnformattedText().contains("/register")){
 				if(ModMain.passwordList.containsKey(mc.getCurrentServerData().serverIP)){
-					mc.thePlayer.sendChatMessage("/register "+ModMain.passwordList.get(mc.getCurrentServerData().serverIP+erverData().serverIP)));
+					mc.thePlayer.sendChatMessage("/register "+ModMain.passwordList.get(mc.getCurrentServerData().serverIP)));
 					isConnect=true;
 				} else {
 					mc.displayGuiScreen(new GuiConnection("register",2));
