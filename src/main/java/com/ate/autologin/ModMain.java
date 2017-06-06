@@ -63,14 +63,14 @@ public class ModMain {
 	public void onChatReceive(ClientChatReceivedEvent event){
 		Minecraft mc=Minecraft.getMinecraft();
 		if(!Minecraft.getMinecraft().isSingleplayer() && !isinConnect){
-			if(event.getMessage().getUnformattedText().contains("OkLook")){
+			if(event.getMessage().getUnformattedText().contains("/register")){
 				if(ModMain.passwordList.containsKey(mc.getCurrentServerData().serverIP)){
-					mc.thePlayer.sendChatMessage("/register "+ModMain.passwordList.get(mc.getCurrentServerData().serverIP+" "+ModMain.passwordList.get(mc.getCurrentServerData().serverIP)));
+					mc.thePlayer.sendChatMessage("/register "+ModMain.passwordList.get(mc.getCurrentServerData().serverIP+erverData().serverIP)));
 					isConnect=true;
 				} else {
 					mc.displayGuiScreen(new GuiConnection("register",2));
 				}
-			}else if(event.getMessage().getUnformattedText().contains("LookHere")){
+			}else if(event.getMessage().getUnformattedText().contains("/login")){
 				if(ModMain.passwordList.containsKey(mc.getCurrentServerData().serverIP)){
 					mc.thePlayer.sendChatMessage("/login "+ModMain.passwordList.get(mc.getCurrentServerData().serverIP));
 					isConnect=true;
